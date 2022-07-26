@@ -37,7 +37,7 @@ rust_do_install() {
 }
 
 rust_do_install:class-nativesdk() {
-    PSEUDO_UNLOAD=1 rust_runx install
+    (PSEUDO_UNLOAD=1 rust_runx install)
 
     install -d ${D}${bindir}
     for i in cargo-clippy clippy-driver rustfmt; do
@@ -50,7 +50,7 @@ rust_do_install:class-nativesdk() {
 }
 
 rust_do_install:class-target() {
-    PSEUDO_UNLOAD=1 rust_runx install
+    (PSEUDO_UNLOAD=1 rust_runx install)
 
     install -d ${D}${bindir}
     for i in cargo-clippy clippy-driver rustfmt; do

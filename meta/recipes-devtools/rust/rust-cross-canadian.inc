@@ -5,6 +5,8 @@ inherit rust-common
 
 LICENSE = "MIT"
 
+MODIFYTOS = "0"
+
 create_sdk_wrapper () {
         file="$1"
         shift
